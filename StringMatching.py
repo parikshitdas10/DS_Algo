@@ -1,9 +1,4 @@
-from numpy import False_
 
-
-A = "zzzX"
-B = "zzzX"
-flag = True
 c = 0
 lst1 = []
 lst2 = []
@@ -19,6 +14,4 @@ for i in range(len(A)):
             c = c+1
         lst1.clear()
         lst2.clear()
-
-
 print(c)

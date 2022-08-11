@@ -1,17 +1,27 @@
 import java.util.*;
 
-class Solution {
+public class Obstacles {
     static Set<Item> set = new HashSet<>();
-    static int[] dir = new int[] { 0, 1, 2, 3 };
+    static int[] dir = new int[] { 0, 1, 2, 3 }; // right, down, left, up
 
-    public int solution(String[] R) {
-        char[][] board1 = new char[R.length][];
+    public static void main(String[] args) {
+        /*
+         * char[][] board = new char[][]{
+         * {'.','.','.','.','X','.','.'},
+         * {'X','.','.','.','.','.','.'},
+         * {'.','.','.','.','.','X','.'},
+         * {'.','.','.','.','.','.','.'},
+         * };
+         */
 
-        for (int i = 0; i < R.length; i++) {
-            board1[i] = R[i].toCharArray();
-        }
-        return solve(board1);
+        char[][] board1 = new char[][] {
+                { '.', '.', 'X', '.', '.' },
+                { 'X', '.', '.', '.', '.' },
+                { '.', '.', '.', '.', '.' },
+                { '.', '.', '.', '.', '.' },
+        };
 
+        System.out.println(solve(board1));
     }
 
     public static int solve(char[][] board) {
